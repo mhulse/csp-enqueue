@@ -1,0 +1,99 @@
+<csr:rule name="custom.rg.EnqueueRule" match="custom:rg:enqueue" textonly>
+	
+	<csr:class super="dt.common.page.Rule" />
+	
+	<csr:description>
+		
+		<ul>
+			<li>Version: v2.0.0</li>
+			<li>Date: Monday, November 26, 2012</li>
+			<li>Docs: <a href="https://github.com/mhulse/csp-enqueue">https://github.com/mhulse/csp-enqueue</a></li>
+		</ul>
+		
+	</csr:description>
+	
+	<csr:attribute name="head"   description="Insert content into the &lt;head&gt; of the document."                                  type="head:NUMBER"    />
+	<csr:attribute name="body"   description="Insert content into the &lt;body&gt; of the document."                                  type="body:NUMBER"    />
+	<csr:attribute name="uglify" description="Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns." type="uglify:BOOLEAN" />
+	
+	<csr:action>
+		
+		<script language="cache" runat="compiler">
+			do ##this.RenderDTStartTag()
+		</script>
+		
+		<csr:section name="##($select(##this.IsDefined("body"):"BODY", 1:"HEAD"))##" block="##($select($isvalidnum(##this.GetAttribute("body"), 0):$number(##this.GetAttribute("body"), 0), $isvalidnum(##this.GetAttribute("head"), 0):$number(##this.GetAttribute("head"), 0), 1:1))##">
+			
+			<script language="cache" runat="server">
+				
+				; Declare:
+				new ugly
+				
+				; Uglify the string:
+				set ugly = $zstrip($translate(##'..InnerText()'##, $char(9, 10, 13)), "<>W") ; Trim leading/trailing spaces; remove horizontal tabs, line feeds and carriage returns.
+				
+				; Is it worth continuing?
+				if ($length(ugly)) {
+					
+					; Define:
+					#define WHICH write !, $case(##'..IsDefined("uglify")'##, 1:ugly, :##'..InnerText()'##), ! // Writes the "uglified" or non-"uglified" HTML.
+					
+					; Declare:
+					new:( ' $data(enqueue)) enqueue // If not already declared then declare it now.
+					new encoded
+					
+					; Base64 encode HTML:
+					set encoded = $System.Encryption.Base64Encode(ugly)
+					
+					; Do we have a valid list?
+					if ($listlength($get(enqueue))) { // The empty string ("") by itself is also considered a valid list.
+						
+						; Yes! Does the encoded value already exist in the $list?
+						if ( ' $listfind(enqueue, encoded)) {
+							
+							; Encoded HTML not found, so add the encoded HTML string to the $list:
+							set enqueue = enqueue _ $listbuild(encoded)
+							
+							; Write the HTML:
+							$$$WHICH
+							
+						}
+						
+					} else {
+						
+						; No! Add the encoded HTML to the $list:
+						set enqueue = $listbuild(encoded)
+						
+						; Write the HTML:
+						$$$WHICH
+						
+					}
+					
+					; Garbage collection:
+					kill encoded
+					
+					; Undefine:
+					#undef WHICH
+					
+				}
+				
+				; GC:
+				kill ugly
+				
+			</script>
+			
+		</csr:section>
+		
+		<csr:section name="POSTHTML">
+			
+			#[ kill:($data(enqueue)) enqueue ; GC. ]#
+			
+		</csr:section>
+		
+		<script language="cache" runat="compiler">
+			do ##this.RenderDTEndTag()
+		</script>
+		
+	</csr:action>
+	
+</csr:rule>

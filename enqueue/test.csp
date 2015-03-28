@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Testing enqueue</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head>
+<body>
+
+<custom:rg:enqueue><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script></custom:rg:enqueue>
+<custom:rg:enqueue><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script></custom:rg:enqueue>
+
+<custom:rg:enqueue body="2" uglify>
+	<script type="text/javascript" src="http://rgweb.slideshowpro.com/m/embed.js"></script>
+	<script type="text/javascript">
+		SlideShowPro({
+			attributes: {
+				id: "album-363953",
+				width: 550,
+				height: 400
+			},
+			mobile: {
+				auto: false
+			},
+			params: {
+				bgcolor: "#000000",
+				allowfullscreen: true
+			},
+			flashvars: {
+				xmlFilePath: "http://rgweb.slideshowpro.com/images.php?album=363953"
+			}
+		});
+	</script>
+</custom:rg:enqueue>
+<div id="album-363953"></div>
+
+<custom:rg:enqueue><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script></custom:rg:enqueue>
+
+<custom:rg:enqueue body><script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script></custom:rg:enqueue>
+<custom:rg:enqueue body><script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script></custom:rg:enqueue> 
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis elit dapibus eros ornare et venenatis turpis fermentum. Integer dictum, ipsum a dapibus gravida, arcu lorem blandit eros, sit amet commodo est sapien in velit. In hac habitasse platea dictumst. Sed lorem tortor, cursus accumsan iaculis sit amet, gravida eu nisl. Suspendisse potenti. Quisque in bibendum mauris. Pellentesque aliquet, velit eu congue placerat, metus nibh ornare neque, et lacinia libero odio at nunc. Curabitur lobortis consequat purus nec vulputate. Integer condimentum ullamcorper dictum. Nam eget nulla tortor. In eros nisl, lacinia ac ultrices ac, pulvinar vitae mi. Sed luctus, ipsum eu mollis venenatis, massa leo hendrerit elit, non dignissim lorem risus at quam. Curabitur cursus tincidunt nibh, at egestas nisl tempus ut. Cras condimentum dui a leo sodales vehicula.</p>
+
+<p>Nam ut aliquet diam. Suspendisse et mauris tempus urna ullamcorper placerat at non eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra pellentesque sem eu dictum. Nunc accumsan sagittis velit, quis condimentum diam hendrerit a. Fusce sollicitudin, nibh eu bibendum aliquet, magna nulla lacinia nisl, vitae imperdiet diam leo quis massa. Pellentesque sodales rutrum tempus. Vivamus nunc nisi, auctor bibendum condimentum quis, tincidunt sed magna. Nunc a quam dolor. Donec eu mi in diam placerat luctus in in massa. Etiam commodo, odio et lobortis condimentum, sapien sapien iaculis tellus, et rhoncus leo massa ut diam. Ut molestie aliquet lectus, nec condimentum sem mollis id.</p>
+
+<p>Praesent sit amet nulla tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin elementum tincidunt arcu at congue. Sed rhoncus suscipit augue, in placerat eros vestibulum nec. Donec ac diam turpis, sed lobortis ipsum. Ut eros est, laoreet ac hendrerit id, ullamcorper id lorem. Aenean fermentum lectus eu purus gravida facilisis eu at elit. Donec sapien justo, sollicitudin eget commodo in, blandit non massa. Nulla quis sagittis velit. Phasellus nibh diam, viverra consequat tincidunt et, luctus eget nunc. Cras aliquet lacinia dolor vel condimentum.</p>
+
+<p>Ut a urna non lectus fermentum molestie id a sapien. Donec non dictum nulla. Aliquam gravida eleifend nisl sed consectetur. Pellentesque et varius neque. Aliquam eu eros est. Proin sed nibh nec neque adipiscing lacinia et eu ante. Suspendisse porta vehicula orci sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse euismod ipsum at eros fringilla elementum. Quisque eu leo arcu, tempus sodales tellus. Phasellus eleifend arcu ac est volutpat aliquam. Donec egestas, tortor eu mollis iaculis, est metus commodo mi, non semper enim metus dignissim augue. Sed auctor sollicitudin purus, id volutpat risus iaculis vitae. Suspendisse sodales tristique vestibulum. Nam purus turpis, convallis at consequat a, malesuada eu orci. Sed euismod posuere augue a scelerisque.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis elit dapibus eros ornare et venenatis turpis fermentum. Integer dictum, ipsum a dapibus gravida, arcu lorem blandit eros, sit amet commodo est sapien in velit. In hac habitasse platea dictumst. Sed lorem tortor, cursus accumsan iaculis sit amet, gravida eu nisl. Suspendisse potenti. Quisque in bibendum mauris. Pellentesque aliquet, velit eu congue placerat, metus nibh ornare neque, et lacinia libero odio at nunc. Curabitur lobortis consequat purus nec vulputate. Integer condimentum ullamcorper dictum. Nam eget nulla tortor. In eros nisl, lacinia ac ultrices ac, pulvinar vitae mi. Sed luctus, ipsum eu mollis venenatis, massa leo hendrerit elit, non dignissim lorem risus at quam. Curabitur cursus tincidunt nibh, at egestas nisl tempus ut. Cras condimentum dui a leo sodales vehicula.</p>
+
+<p>Nam ut aliquet diam. Suspendisse et mauris tempus urna ullamcorper placerat at non eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra pellentesque sem eu dictum. Nunc accumsan sagittis velit, quis condimentum diam hendrerit a. Fusce sollicitudin, nibh eu bibendum aliquet, magna nulla lacinia nisl, vitae imperdiet diam leo quis massa. Pellentesque sodales rutrum tempus. Vivamus nunc nisi, auctor bibendum condimentum quis, tincidunt sed magna. Nunc a quam dolor. Donec eu mi in diam placerat luctus in in massa. Etiam commodo, odio et lobortis condimentum, sapien sapien iaculis tellus, et rhoncus leo massa ut diam. Ut molestie aliquet lectus, nec condimentum sem mollis id.</p>
+
+<p>Praesent sit amet nulla tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin elementum tincidunt arcu at congue. Sed rhoncus suscipit augue, in placerat eros vestibulum nec. Donec ac diam turpis, sed lobortis ipsum. Ut eros est, laoreet ac hendrerit id, ullamcorper id lorem. Aenean fermentum lectus eu purus gravida facilisis eu at elit. Donec sapien justo, sollicitudin eget commodo in, blandit non massa. Nulla quis sagittis velit. Phasellus nibh diam, viverra consequat tincidunt et, luctus eget nunc. Cras aliquet lacinia dolor vel condimentum.</p>
+
+<p>Ut a urna non lectus fermentum molestie id a sapien. Donec non dictum nulla. Aliquam gravida eleifend nisl sed consectetur. Pellentesque et varius neque. Aliquam eu eros est. Proin sed nibh nec neque adipiscing lacinia et eu ante. Suspendisse porta vehicula orci sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse euismod ipsum at eros fringilla elementum. Quisque eu leo arcu, tempus sodales tellus. Phasellus eleifend arcu ac est volutpat aliquam. Donec egestas, tortor eu mollis iaculis, est metus commodo mi, non semper enim metus dignissim augue. Sed auctor sollicitudin purus, id volutpat risus iaculis vitae. Suspendisse sodales tristique vestibulum. Nam purus turpis, convallis at consequat a, malesuada eu orci. Sed euismod posuere augue a scelerisque.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis elit dapibus eros ornare et venenatis turpis fermentum. Integer dictum, ipsum a dapibus gravida, arcu lorem blandit eros, sit amet commodo est sapien in velit. In hac habitasse platea dictumst. Sed lorem tortor, cursus accumsan iaculis sit amet, gravida eu nisl. Suspendisse potenti. Quisque in bibendum mauris. Pellentesque aliquet, velit eu congue placerat, metus nibh ornare neque, et lacinia libero odio at nunc. Curabitur lobortis consequat purus nec vulputate. Integer condimentum ullamcorper dictum. Nam eget nulla tortor. In eros nisl, lacinia ac ultrices ac, pulvinar vitae mi. Sed luctus, ipsum eu mollis venenatis, massa leo hendrerit elit, non dignissim lorem risus at quam. Curabitur cursus tincidunt nibh, at egestas nisl tempus ut. Cras condimentum dui a leo sodales vehicula.</p>
+
+<p>Nam ut aliquet diam. Suspendisse et mauris tempus urna ullamcorper placerat at non eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra pellentesque sem eu dictum. Nunc accumsan sagittis velit, quis condimentum diam hendrerit a. Fusce sollicitudin, nibh eu bibendum aliquet, magna nulla lacinia nisl, vitae imperdiet diam leo quis massa. Pellentesque sodales rutrum tempus. Vivamus nunc nisi, auctor bibendum condimentum quis, tincidunt sed magna. Nunc a quam dolor. Donec eu mi in diam placerat luctus in in massa. Etiam commodo, odio et lobortis condimentum, sapien sapien iaculis tellus, et rhoncus leo massa ut diam. Ut molestie aliquet lectus, nec condimentum sem mollis id.</p>
+
+<p>Praesent sit amet nulla tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin elementum tincidunt arcu at congue. Sed rhoncus suscipit augue, in placerat eros vestibulum nec. Donec ac diam turpis, sed lobortis ipsum. Ut eros est, laoreet ac hendrerit id, ullamcorper id lorem. Aenean fermentum lectus eu purus gravida facilisis eu at elit. Donec sapien justo, sollicitudin eget commodo in, blandit non massa. Nulla quis sagittis velit. Phasellus nibh diam, viverra consequat tincidunt et, luctus eget nunc. Cras aliquet lacinia dolor vel condimentum.</p>
+
+<p>Ut a urna non lectus fermentum molestie id a sapien. Donec non dictum nulla. Aliquam gravida eleifend nisl sed consectetur. Pellentesque et varius neque. Aliquam eu eros est. Proin sed nibh nec neque adipiscing lacinia et eu ante. Suspendisse porta vehicula orci sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse euismod ipsum at eros fringilla elementum. Quisque eu leo arcu, tempus sodales tellus. Phasellus eleifend arcu ac est volutpat aliquam. Donec egestas, tortor eu mollis iaculis, est metus commodo mi, non semper enim metus dignissim augue. Sed auctor sollicitudin purus, id volutpat risus iaculis vitae. Suspendisse sodales tristique vestibulum. Nam purus turpis, convallis at consequat a, malesuada eu orci. Sed euismod posuere augue a scelerisque.</p>
+
+</body>
+</html>
+
+<script language="cache" runat="server">
+	
+	; Debug:
+	write !, "<pre>"
+	try {
+		set currIO = ##class(%SYS.NLS.Device).SetIO("HTML")
+		zwrite
+	}
+	catch {
+		write "ERROR: ", $ZERROR
+	}
+	if ($get(currIO) '= "") {
+		do ##class(%SYS.NLS.Device).SetIO(currIO)
+	}
+	write "</pre>"
+	
+</script>
